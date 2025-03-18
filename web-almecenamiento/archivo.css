@@ -1,0 +1,184 @@
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #1e293b, #334155);
+    color: white;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  h1 {
+    margin-bottom: 70px;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    animation: slideDown 0.8s ease-out;
+  }
+
+  .upload-wrapper {
+    animation: popIn 1s ease-in-out;
+  }
+
+  .upload-box {
+    padding: 60px;
+    border: 3px dashed white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    font-size: 1.2em;
+    user-select: none;
+  }
+
+  .upload-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  #fileList {
+    list-style: none;
+    padding: 0;
+  }
+
+  .file-item {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.5s ease-in-out;
+  }
+
+  .btn-container {
+    display: flex;
+    gap: 15px;
+  }
+
+  .download-btn, .delete-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .download-btn {
+    background: #10b981;
+    color: white;
+  }
+
+  .download-btn:hover {
+    background: #059669;
+    transform: scale(1.1);
+  }
+
+  .delete-btn {
+    background: #ef4444;
+    color: white;
+  }
+
+  .delete-btn:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+
+
+
+  
+
+    /* Responsive */
+
+
+  @media (max-width: 992px) {
+    .container {
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .upload-box {
+      padding: 70px;
+      font-size: 1.2em;
+    }
+
+    .file-item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .btn-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .upload-box {
+      padding: 50px;
+      font-size: 1em;
+    }
+
+    .file-item {
+      padding: 20px;
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
